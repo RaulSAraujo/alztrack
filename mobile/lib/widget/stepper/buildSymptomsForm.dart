@@ -17,14 +17,14 @@ class BuildSymptomsForm extends StatefulWidget {
     bool forgetfulness,
   ) onValuesChanged;
   const BuildSymptomsForm({
-    Key? key,
+    super.key,
     required this.initialConfusion,
     required this.initialDisorientation,
     required this.initialPersonalityChanges,
     required this.initialDifficultyCompletingTasks,
     required this.initialForgetfulness,
     required this.onValuesChanged,
-  }) : super(key: key);
+  });
 
   @override
   State<BuildSymptomsForm> createState() => _BuildSymptomsFormState();

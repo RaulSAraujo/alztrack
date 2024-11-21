@@ -19,7 +19,7 @@ class BuildClinicalMeasurementsForm extends StatefulWidget {
   ) onValuesChanged;
 
   const BuildClinicalMeasurementsForm({
-    Key? key,
+    super.key,
     required this.initialSystolicBP,
     required this.initialDiastolicBP,
     required this.initialCholesterolTotal,
@@ -27,7 +27,7 @@ class BuildClinicalMeasurementsForm extends StatefulWidget {
     required this.initialCholesterolHDL,
     required this.initialCholesterolTriglycerides,
     required this.onValuesChanged,
-  }) : super(key: key);
+  });
 
   @override
   State<BuildClinicalMeasurementsForm> createState() =>

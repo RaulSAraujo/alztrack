@@ -14,13 +14,13 @@ class BuildBasicInfoForm extends StatefulWidget {
   final Function(double, int, int, int) onValuesChanged;
 
   const BuildBasicInfoForm({
-    Key? key,
+    super.key,
     required this.initialAge,
     required this.initialGender,
     required this.initialEthnicity,
     required this.initialEducationLevel,
     required this.onValuesChanged,
-  }) : super(key: key);
+  });
 
   @override
   State<BuildBasicInfoForm> createState() => _BuildBasicInfoFormState();
@@ -49,7 +49,7 @@ class _BuildBasicInfoFormState extends State<BuildBasicInfoForm> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SectionTitle(title: 'Informações Básicas'),
+        const SectionTitle(title: 'Informações Básicas'),
         AgeSlider(
           age: age,
           onChanged: (value) {
@@ -58,7 +58,7 @@ class _BuildBasicInfoFormState extends State<BuildBasicInfoForm> {
             _notifyParent();
           },
         ),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         GenderSelection(
           selectedGender: gender,
           onChanged: (int? value) {
@@ -67,7 +67,7 @@ class _BuildBasicInfoFormState extends State<BuildBasicInfoForm> {
             _notifyParent();
           },
         ),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         EthnicitySelector(
           selectedEthnicity: ethnicity,
           onChanged: (newValue) {
@@ -76,7 +76,7 @@ class _BuildBasicInfoFormState extends State<BuildBasicInfoForm> {
             _notifyParent();
           },
         ),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         EducationLevelSelector(
           selectedLevel: educationLevel,
           onChanged: (newValue) {

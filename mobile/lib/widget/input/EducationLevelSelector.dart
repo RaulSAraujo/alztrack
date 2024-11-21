@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class EducationLevelSelector extends StatelessWidget {
@@ -6,21 +5,21 @@ class EducationLevelSelector extends StatelessWidget {
   final ValueChanged<int> onChanged;
 
   const EducationLevelSelector({
-    Key? key,
+    super.key,
     required this.selectedLevel,
     required this.onChanged,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        const Text(
           'Select Education Level',
           style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
         ),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         DropdownButton<int>(
           value: selectedLevel,
           isExpanded: true,

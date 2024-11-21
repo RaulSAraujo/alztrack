@@ -19,7 +19,7 @@ class BuildMedicalHistoryForm extends StatefulWidget {
   ) onValuesChanged;
 
   const BuildMedicalHistoryForm({
-    Key? key,
+    super.key,
     required this.initialFamilyHistoryAlzheimers,
     required this.initialCardiovascularDisease,
     required this.initialDiabetes,
@@ -27,7 +27,7 @@ class BuildMedicalHistoryForm extends StatefulWidget {
     required this.initialHeadInjury,
     required this.initialHypertension,
     required this.onValuesChanged,
-  }) : super(key: key);
+  });
 
   @override
   State<BuildMedicalHistoryForm> createState() =>

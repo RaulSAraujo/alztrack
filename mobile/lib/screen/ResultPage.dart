@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class ResultScreen extends StatelessWidget {
   final int risk; // 0 ou 1
 
-  const ResultScreen({Key? key, required this.risk}) : super(key: key);
+  const ResultScreen({super.key, required this.risk});
 
   String getRiskLevel(int risk) {
     return risk == 0 ? 'Baixo Risco' : 'Alto Risco';

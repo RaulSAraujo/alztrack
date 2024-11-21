@@ -5,6 +5,7 @@ class GenderSelection extends StatelessWidget {
   final ValueChanged<int?> onChanged;
 
   const GenderSelection({
+    super.key,
     required this.selectedGender,
     required this.onChanged,
   });
@@ -14,14 +15,14 @@ class GenderSelection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        const Text(
           'Selecione o gênero',
           style: TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.bold,
           ),
         ),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [

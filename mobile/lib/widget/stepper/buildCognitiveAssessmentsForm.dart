@@ -18,14 +18,14 @@ class BuildCognitiveAssessmentsForm extends StatefulWidget {
   ) onValuesChanged;
 
   const BuildCognitiveAssessmentsForm({
-    Key? key,
+    super.key,
     required this.initialMMSE,
     required this.initialFunctionalAssessment,
     required this.initialMemoryComplaints,
     required this.initialBehavioralProblems,
     required this.initialADL,
     required this.onValuesChanged,
-  }) : super(key: key);
+  });
 
   @override
   State<BuildCognitiveAssessmentsForm> createState() =>

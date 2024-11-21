@@ -20,7 +20,7 @@ class BuildLifestyleForm extends StatefulWidget {
   ) onValuesChanged;
 
   const BuildLifestyleForm({
-    Key? key,
+    super.key,
     required this.initialIMC,
     required this.initialSmoking,
     required this.initialAlcoholConsumption,
@@ -28,7 +28,7 @@ class BuildLifestyleForm extends StatefulWidget {
     required this.initialDietQuality,
     required this.initialSleepQuality,
     required this.onValuesChanged,
-  }) : super(key: key);
+  });
 
   @override
   State<BuildLifestyleForm> createState() => _BuildLifestyleFormState();
@@ -79,7 +79,7 @@ class _BuildLifestyleFormState extends State<BuildLifestyleForm> {
             _notifyParent();
           },
         ),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         CustomSwitchTile(
           value: smoking,
           onChanged: (value) {
@@ -89,7 +89,7 @@ class _BuildLifestyleFormState extends State<BuildLifestyleForm> {
           },
           label: 'Situação de fumante',
         ),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         CustomSlider(
           title: 'Consumo semanal de álcool em unidades',
           min: 0,
@@ -101,7 +101,7 @@ class _BuildLifestyleFormState extends State<BuildLifestyleForm> {
             _notifyParent();
           },
         ),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         CustomSlider(
           title: 'Atividade física semanal em horas',
           min: 0,
@@ -113,7 +113,7 @@ class _BuildLifestyleFormState extends State<BuildLifestyleForm> {
             _notifyParent();
           },
         ),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         CustomSlider(
           title: 'Qualidade da Dieta',
           min: 0,
@@ -125,7 +125,7 @@ class _BuildLifestyleFormState extends State<BuildLifestyleForm> {
             _notifyParent();
           },
         ),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         CustomSlider(
           title: 'Qualidade do sono',
           min: 4,

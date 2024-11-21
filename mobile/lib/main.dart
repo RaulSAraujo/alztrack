@@ -1,13 +1,13 @@
-import 'package:alztrack/screen/LoginPage.dart';
 import 'package:flutter/material.dart';
+import 'package:alztrack/screen/LoginPage.dart';
 
-import 'screen/mainFormPage.dart';
-
-void main() {
-  runApp(AlzheimerApp());
+void main() async {
+  runApp(const AlzheimerApp());
 }
 
 class AlzheimerApp extends StatelessWidget {
+  const AlzheimerApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,12 +17,12 @@ class AlzheimerApp extends StatelessWidget {
         primarySwatch: Colors.teal,
         fontFamily: 'Roboto',
         scaffoldBackgroundColor: Colors.teal[50],
-        textTheme: TextTheme(
-          bodyText2: TextStyle(color: Colors.black87),
-          headline6: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+        textTheme: const TextTheme(
+          bodyMedium: TextStyle(color: Colors.black87),
+          titleLarge: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         ),
       ),
-      home: LoginScreen(),
+      home: const LoginScreen(),
     );
   }
 }

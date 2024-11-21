@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class CustomSwitchTile extends StatelessWidget {
@@ -7,6 +6,7 @@ class CustomSwitchTile extends StatelessWidget {
   final String label;
 
   const CustomSwitchTile({
+    super.key,
     required this.value,
     required this.onChanged,
     required this.label,
@@ -20,13 +20,13 @@ class CustomSwitchTile extends StatelessWidget {
       child: SwitchListTile(
         title: Text(
           label,
-          style: TextStyle(fontSize: 16), // Diminui o tamanho da fonte
+          style: const TextStyle(fontSize: 16), // Diminui o tamanho da fonte
         ),
         value: value,
         onChanged: onChanged,
         activeColor: Colors.teal,
         inactiveTrackColor: Colors.grey,
-        contentPadding: EdgeInsets.all(0), // Remove o padding extra
+        contentPadding: const EdgeInsets.all(0), // Remove o padding extra
       ),
     );
   }

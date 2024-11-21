@@ -5,10 +5,10 @@ class AgeSlider extends StatelessWidget {
   final ValueChanged<double> onChanged;
 
   const AgeSlider({
-    Key? key,
+    super.key,
     required this.age,
     required this.onChanged,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class AgeSlider extends StatelessWidget {
       children: [
         Text(
           'Idade: ${age.toInt()}',
-          style: TextStyle(fontSize: 20),
+          style: const TextStyle(fontSize: 20),
         ),
         Slider(
           value: age,

@@ -8,13 +8,13 @@ class CustomSlider extends StatelessWidget {
   final ValueChanged<double> onChanged;
 
   const CustomSlider({
-    Key? key,
+    super.key,
     required this.title,
     required this.min,
     required this.max,
     required this.value,
     required this.onChanged,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class CustomSlider extends StatelessWidget {
         Text(
           '$title: ${value.toInt()}',
           textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 20),
+          style: const TextStyle(fontSize: 20),
         ),
         Slider(
           value: value,
